@@ -1,0 +1,17 @@
+{
+  "name": "0x02-tailwind-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^4.1.11"
+  },
+"scripts": {
+  "build": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
