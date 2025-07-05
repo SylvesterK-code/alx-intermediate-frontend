@@ -1,0 +1,1 @@
+content: ["./*.html", "./src/**/*.{html,js}"]
