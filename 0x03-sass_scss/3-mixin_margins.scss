@@ -1,0 +1,14 @@
+// Define a reusable mixin
+@mixin horizontal-margins($value) {
+  margin-left: $value;
+  margin-right: $value;
+}
+
+// Use the mixin
+body {
+  @include horizontal-margins(10px);
+}
+
+div {
+  @include horizontal-margins(15px);
+}

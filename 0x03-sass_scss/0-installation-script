@@ -40,7 +40,7 @@ _______________________________________________________________
 6. Tested Sass compilation:
    npx sass 0-debug_log.scss
 
-   Expected Output:
+   Output:
    0-debug_log.scss:2 DEBUG: Hello world
 
 
@@ -73,14 +73,14 @@ ___________________________________________________________________
 9. Tested Sass compilation:
    npx sass 1-color_variable.scss | tail -n +2
 
-   Expected Output:
-   body {
-     color: #3D3D3D;
-   }
+   Output:
+        body {
+            color: #3D3D3D;
+        }
 
-   p {
-     color: #3D3D3D;
-   }
+        p {
+            color: #3D3D3D;
+        }
 
 10. Git commands used:
     git add .
@@ -112,7 +112,7 @@ ______________________________________________________________________________
 13. Tested Sass compilation:
     npx sass 2-nested_tag.scss
 
-    Expected Output:
+    Output:
     body {
       margin: 0px;
       padding: 0px;
@@ -126,4 +126,44 @@ ______________________________________________________________________________
 
         git add .
         git commit -m "Add Sass nested rules for body and paragraph tags"
+        git push origin main
+
+    
+
+Task 4
+___________________________________________________________
+14. Created the file 3-mixin_margins.scss:
+    ni 3-mixin_margins.scss
+
+15. Added this content using a mixin:
+    @mixin horizontal-margins($value) {
+      margin-left: $value;
+      margin-right: $value;
+    }
+
+    body {
+      @include horizontal-margins(10px);
+    }
+
+    div {
+      @include horizontal-margins(15px);
+    }
+
+16. Tested Sass compilation:
+    npx sass 3-mixin_margins.scss | tail -n +2
+
+    Output:
+    body {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    div {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+
+        git add .
+        git commit -m "Add mixin to apply horizontal margins to body and div"
         git push origin main
