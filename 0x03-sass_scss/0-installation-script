@@ -25,6 +25,24 @@ git add 0x03-sass_scss/0-debug_log.scss 0x03-sass_scss/0-installation-script
 git commit -m "Set up Sass and added Hello World debug output"
 git push
 
+4. Create the file 0-debug_log.scss:
 
+
+ni 0-debug_log.scss
+
+added this content:
+
+
+@debug "Hello world";
+
+Test It
+Run in terminal:
+
+npx sass 0-debug_log.scss
+
+Output:
+
+
+0-debug_log.scss:2 DEBUG: Hello world
 
 
