@@ -46,3 +46,8 @@ Output:
 0-debug_log.scss:2 DEBUG: Hello world
 
 
+
+
+5. git add .
+git commit -m "Add Sass variable to assign text color to body and p"
+git push origin main
