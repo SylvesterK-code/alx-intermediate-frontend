@@ -25,29 +25,62 @@ git add 0x03-sass_scss/0-debug_log.scss 0x03-sass_scss/0-installation-script
 git commit -m "Set up Sass and added Hello World debug output"
 git push
 
-4. Create the file 0-debug_log.scss:
+4. Created the file 0-debug_log.scss:
+   ni 0-debug_log.scss
+
+5. Added this content to 0-debug_log.scss:
+   @debug "Hello world";
+
+6. Tested Sass compilation:
+   npx sass 0-debug_log.scss
+
+   Expected Output:
+   0-debug_log.scss:2 DEBUG: Hello world
 
 
-ni 0-debug_log.scss
-
-added this content:
-
-
-@debug "Hello world";
-
-Test It
-Run in terminal:
-
-npx sass 0-debug_log.scss
-
-Output:
-
-
-0-debug_log.scss:2 DEBUG: Hello world
-
-
-
-
-5. git add .
-git commit -m "Add Sass variable to assign text color to body and p"
+git add .
+git commit -m "Set up Sass and added Hello World debug output "
 git push origin main
+
+
+___________________________________________________________________
+
+
+7. Created the file 1-color_variable.scss:
+   ni 1-color_variable.scss
+
+8. Added this content to 1-color_variable.scss:
+   $text-color: #3D3D3D;
+
+   body {
+     color: $text-color;
+   }
+
+   p {
+     color: $text-color;
+   }
+
+9. Tested Sass compilation:
+   npx sass 1-color_variable.scss | tail -n +2
+
+   Expected Output:
+   body {
+     color: #3D3D3D;
+   }
+
+   p {
+     color: #3D3D3D;
+   }
+
+10. Git commands used:
+    git add .
+    git commit -m "Add Sass variable to assign text color to body and p"
+    git push origin main
+
+    OR (for specific files)
+    git add 0x03-sass_scss/1-color_variable.scss
+    git commit -m "Add Sass variable to assign text color to body and p"
+    git push
+
+
+
